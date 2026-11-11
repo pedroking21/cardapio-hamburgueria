@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Faz o layout se adaptar corretamente às telas de celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Cardápio digital da Brasa Urbana Burger"
+    >
+
+    <title>Brasa Urbana Burger | Cardápio</title>
+
+    <!-- O arquivo CSS será conectado nesta etapa futura -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="inicio">
+
+    <!-- Cabeçalho principal -->
+    <header class="cabecalho">
+        <div class="marca">
+            <span class="marca-icone" aria-hidden="true">●</span>
+
+            <div>
+                <p class="marca-nome">Brasa Urbana</p>
+                <p class="marca-subtitulo">Burger House</p>
+            </div>
+        </div>
+
+        <p class="cabecalho-frase">
+            Sabor de rua, qualidade de restaurante.
+        </p>
+    </header>
+
+    <main>
+
+        <!-- Área de destaque -->
+        <section class="destaque" aria-labelledby="titulo-destaque">
+            <div class="destaque-conteudo">
+                <p class="destaque-etiqueta">CARDÁPIO DIGITAL</p>
+
+                <h1 id="titulo-destaque">
+                    Hambúrguer artesanal feito para matar a fome.
+                </h1>
+
+                <p>
+                    Ingredientes selecionados, pão macio e muito sabor em cada mordida.
+                </p>
+            </div>
+        </section>
+
+        <!-- Navegação pelas categorias -->
+        <nav class="navegacao-categorias" aria-label="Categorias do cardápio">
+            <a href="#hamburgueres">Hambúrgueres</a>
+            <a href="#combos">Combos</a>
+            <a href="#porcoes">Porções</a>
+            <a href="#bebidas">Bebidas</a>
+            <a href="#sobremesas">Sobremesas</a>
+        </nav>
+
+        <!-- Categoria: Hambúrgueres -->
+        <section
+            class="categoria"
+            id="hamburgueres"
+            aria-labelledby="titulo-hamburgueres"
+        >
+            <div class="titulo-categoria">
+                <p>OS FAVORITOS DA CASA</p>
+                <h2 id="titulo-hamburgueres">Hambúrgueres</h2>
+            </div>
+
+            <div class="lista-produtos">
+
+                <article class="produto">
+                    <img
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+                        alt="Hambúrguer artesanal com queijo, alface e tomate"
+                    >
+
+                    <div class="produto-conteudo">
+                        <h3>Brasa Clássico</h3>
+
+                        <p class="produto-descricao">
+                            Pão brioche, hambúrguer bovino de  smash, queijo cheddar,
+                            alface, tomate e molho especial da casa.
+                        </p>
+
+                        <p class="produto-preco">R$ 29,90</p>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <img
+                        src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=800&q=80"
+                        alt="Hambúrguer artesanal com queijo derretido e bacon"
+                    >
+
+                    <div class="produto-conteudo">
+                        <h3>Urbano Bacon</h3>
+
+                        <p class="produto-descricao">
+                            Pão brioche, hambúrguer bovino, queijo prato, bacon crocante,
+                            cebola caramelizada e maionese defumada.
+                        </p>
+
+                        <p class="produto-preco">R$ 34,90</p>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <img
+                        src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80"
+                        alt="Hambúrguer artesanal duplo com queijo"
+                    >
+
+                    <div class="produto-conteudo">
+                        <h3>Duplo Fumaça</h3>
+
+                        <p class="produto-descricao">
+                            Dois hambúrgueres bovinos, queijo cheddar duplo,
+                            cebola crispy, picles e molho barbecue.
+                        </p>
+
+                        <p class="produto-preco">R$ 39,90</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Categoria: Combos -->
+        <section
+            class="categoria"
+            id="combos"
+            aria-labelledby="titulo-combos"
+        >
+            <div class="titulo-categoria">
+                <p>COMPLETOS E SABOROSOS</p>
+                <h2 id="titulo-combos">Combos</h2>
+            </div>
+
+            <div class="lista-produtos">
+
+                <article class="produto">
+                    <img
+                        src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=800&q=80"
+                        alt="Combo com hambúrguer, batatas fritas e bebida"
+                    >
+
+                    <div class="produto-conteudo">
+                        <h3>Combo Clássico</h3>
+
+                        <p class="produto-descricao">
+                            Brasa Clássico, batata frita individual e refrigerante
+                            em lata.
+                        </p>
+
+                        <p class="produto-preco">R$ 39,90</p>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <img
+                        src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80"
+                        alt="Combo de hambúrguer artesanal com batatas"
+                    >
+
+                    <div class="produto-conteudo">
+                        <h3>Combo Bacon</h3>
+
+                        <p class="produto-descricao">
+                            Urbano Bacon, batata frita com cheddar e bacon,
+                            mais refrigerante em lata.
+                        </p>
+
+                        <p class="produto-preco">R$ 47,90</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Categoria: Porções -->
+        <section
+            class="categoria"
+            id="porcoes"
+            aria-labelledby="titulo-porcoes"
+        >
+            <div class="titulo-categoria">
+                <p>PARA COMPARTILHAR</p>
+                <h2 id="titulo-porcoes">Porções</h2>
+            </div>
+
+            <div class="lista-produtos">
+
+                <article class="produto">
+                    <img
+                        src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80"
+                        alt="Porção de batatas fritas crocantes"
+                    >
+
+                    <div class="produto-conteudo">
+                        <h3>Batata da Casa</h3>
+
+                        <p class="produto-descricao">
+                            Batatas fritas crocantes, temperadas com páprica
+                            e ervas especiais.
+                        </p>
+
+                        <p class="produto-preco">R$ 19,90</p>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <img
+                        src="https://images.unsplash.com/photo-1639024471283-03518883512d?auto=format&fit=crop&w=800&q=80"
+                        alt="Anéis de cebola empanados"
+                    >
+
+                    <div class="produto-conteudo">
+                        <h3>Anéis de Cebola</h3>
+
+                        <p class="produto-descricao">
+                            Anéis de cebola empanados e crocantes acompanhados
+                            de molho especial.
+                        </p>
+
+                        <p class="produto-preco">R$ 22,90</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Categoria: Bebidas -->
+        <section
+            class="categoria"
+            id="bebidas"
+            aria-labelledby="titulo-bebidas"
+        >
+            <div class="titulo-categoria">
+                <p>PARA ACOMPANHAR</p>
+                <h2 id="titulo-bebidas">Bebidas</h2>
+            </div>
+
+            <div class="lista-produtos">
+
+                <article class="produto">
+                    <div class="produto-conteudo">
+                        <h3>Refrigerante Lata</h3>
+
+                        <p class="produto-descricao">
+                            Refrigerante em lata de 350 ml.
+                        </p>
+
+                        <p class="produto-preco">R$ 6,90</p>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <div class="produto-conteudo">
+                        <h3>Chá Gelado</h3>
+
+                        <p class="produto-descricao">
+                            Chá preto gelado com limão e hortelã.
+                        </p>
+
+                        <p class="produto-preco">R$ 8,90</p>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <div class="produto-conteudo">
+                        <h3>Água Mineral</h3>
+
+                        <p class="produto-descricao">
+                            Água mineral sem gás, garrafa de 500 ml.
+                        </p>
+
+                        <p class="produto-preco">R$ 4,90</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Categoria: Sobremesas -->
+        <section
+            class="categoria"
+            id="sobremesas"
+            aria-labelledby="titulo-sobremesas"
+        >
+            <div class="titulo-categoria">
+                <p>PARA TERMINAR BEM</p>
+                <h2 id="titulo-sobremesas">Sobremesas</h2>
+            </div>
+
+            <div class="lista-produtos">
+
+                <article class="produto">
+                    <img
+                        src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80"
+                        alt="Milkshake cremoso de chocolate"
+                    >
+
+                    <div class="produto-conteudo">
+                        <h3>Milkshake de Chocolate</h3>
+
+                        <p class="produto-descricao">
+                            Milkshake cremoso de chocolate com chantilly.
+                        </p>
+
+                        <p class="produto-preco">R$ 16,90</p>
+                    </div>
+                </article>
+
+                <article class="produto">
+                    <img
+                        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+                        alt="Fatia de bolo de chocolate"
+                    >
+
+                    <div class="produto-conteudo">
+                        <h3>Bolo de Chocolate</h3>
+
+                        <p class="produto-descricao">
+                            Fatia de bolo de chocolate com cobertura cremosa.
+                        </p>
+
+                        <p class="produto-preco">R$ 14,90</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p>Brasa Urbana Burger</p>
+        <p>Cardápio ilustrativo — produtos e preços fictícios.</p>
+    </footer>
+
+    <!-- Botão que leva novamente ao início da página -->
+    <a
+        class="botao-voltar-topo"
+        href="#inicio"
+        aria-label="Voltar ao topo da página"
+    >
+        ↑
+    </a>
+
+    <!-- O arquivo JavaScript será conectado quando chegarmos à Etapa 4 -->
+    <script src="script.js"></script>
+</body>
+</html>

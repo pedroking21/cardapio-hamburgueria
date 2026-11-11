@@ -1,0 +1,477 @@
+/* Estilos principais para celulares */
+
+@media (min-width: 768px) {
+  /* Ajustes para tablets e telas maiores */
+}
+
+@media (min-width: 1024px) {
+  /* Ajustes para computadores */
+}
+
+/* =====================================================
+   1. VARIÁVEIS E CONFIGURAÇÕES GERAIS
+   ===================================================== */
+
+:root {
+    --cor-fundo: #f8f5f0;
+    --cor-fundo-card: #ffffff;
+    --cor-escura: #211b18;
+    --cor-texto: #453b36;
+    --cor-texto-suave: #766b64;
+    --cor-destaque: #e85d2a;
+    --cor-destaque-escura: #bb3f18;
+    --cor-amarela: #f5b642;
+    --cor-borda: #eadfd6;
+
+    --fonte-titulo: Georgia, "Times New Roman", serif;
+    --fonte-principal: Arial, Helvetica, sans-serif;
+
+    --sombra-suave: 0 8px 24px rgba(33, 27, 24, 0.08);
+    --raio-card: 18px;
+}
+
+
+/* =====================================================
+   2. RESET BÁSICO
+   ===================================================== */
+
+/*
+   O reset remove diferenças de espaçamento
+   que os navegadores aplicam automaticamente.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   3. CABEÇALHO
+   ===================================================== */
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 20px 18px;
+
+    background-color: var(--cor-escura);
+    color: white;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.marca-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 3px solid var(--cor-amarela);
+    border-radius: 50%;
+
+    color: var(--cor-amarela);
+    font-size: 18px;
+}
+
+.marca-nome {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.marca-subtitulo {
+    color: var(--cor-amarela);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.cabecalho-frase {
+    color: #d9cec7;
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   4. ÁREA DE DESTAQUE
+   ===================================================== */
+
+.destaque {
+    display: flex;
+    align-items: flex-end;
+
+    min-height: 330px;
+    padding: 28px 18px;
+
+    /*
+       Gradiente escuro por cima da imagem:
+       ajuda o texto a ficar legível.
+    */
+    background:
+        linear-gradient(
+            to top,
+            rgba(20, 14, 11, 0.9),
+            rgba(20, 14, 11, 0.2)
+        ),
+        url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=85" )
+        center / cover no-repeat;
+
+    color: white;
+}
+
+.destaque-conteudo {
+    max-width: 560px;
+}
+
+.destaque-etiqueta {
+    margin-bottom: 10px;
+
+    color: var(--cor-amarela);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+}
+
+.destaque h1 {
+    margin-bottom: 12px;
+
+    font-family: var(--fonte-titulo);
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    line-height: 1.05;
+}
+
+.destaque p:last-child {
+    color: #eee3dc;
+    font-size: 0.98rem;
+}
+
+
+/* =====================================================
+   5. NAVEGAÇÃO DAS CATEGORIAS
+   ===================================================== */
+
+.navegacao-categorias {
+    display: flex;
+    gap: 10px;
+
+    padding: 16px 18px;
+
+    background-color: var(--cor-fundo-card);
+    border-bottom: 1px solid var(--cor-borda);
+
+    /*
+       Permite deslizar horizontalmente no celular
+       quando os links não couberem em uma única linha.
+    */
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.navegacao-categorias::-webkit-scrollbar {
+    display: none;
+}
+
+.navegacao-categorias a {
+    flex: 0 0 auto;
+
+    min-height: 42px;
+    padding: 11px 15px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 999px;
+
+    color: var(--cor-texto);
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.navegacao-categorias a:hover,
+.navegacao-categorias a:focus {
+    background-color: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+    color: white;
+}
+
+.navegacao-categorias a.categoria-ativa {
+    background-color: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+    color: white;
+}
+
+
+/* =====================================================
+   6. CATEGORIAS E TÍTULOS
+   ===================================================== */
+
+.categoria {
+    padding: 42px 18px 0;
+    scroll-margin-top: 20px;
+}
+
+.titulo-categoria {
+    margin-bottom: 20px;
+}
+
+.titulo-categoria p {
+    margin-bottom: 4px;
+
+    color: var(--cor-destaque);
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.13em;
+}
+
+.titulo-categoria h2 {
+    color: var(--cor-escura);
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+}
+
+
+/* =====================================================
+   7. LISTA DE PRODUTOS
+   ===================================================== */
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.produto {
+    overflow: hidden;
+
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-card);
+    box-shadow: var(--sombra-suave);
+}
+
+.produto img {
+    display: block;
+
+    width: 100%;
+    height: 125px;
+
+    object-fit: cover;
+}
+
+.produto-conteudo {
+    padding: 12px;
+}
+
+.produto h3 {
+    margin-bottom: 6px;
+
+    color: var(--cor-escura);
+    font-family: var(--fonte-titulo);
+    font-size: 1.05rem;
+    line-height: 1.15;
+}
+
+.produto-descricao {
+    min-height: 96px;
+
+    color: var(--cor-texto-suave);
+    font-size: 0.78rem;
+    line-height: 1.4;
+}
+
+.produto-preco {
+    margin-top: 10px;
+
+    color: var(--cor-destaque-escura);
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   8. RODAPÉ
+   ===================================================== */
+
+.rodape {
+    margin-top: 48px;
+    padding: 30px 18px;
+
+    background-color: var(--cor-escura);
+    color: #d9cec7;
+    text-align: center;
+}
+
+.rodape p:first-child {
+    margin-bottom: 8px;
+
+    color: white;
+    font-family: var(--fonte-titulo);
+    font-size: 1.25rem;
+}
+
+.rodape p:last-child {
+    font-size: 0.8rem;
+}
+
+
+/* =====================================================
+   9. BOTÃO VOLTAR AO TOPO
+   ===================================================== */
+
+.botao-voltar-topo {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    background-color: var(--cor-destaque);
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1;
+    text-decoration: none;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
+
+    box-shadow: 0 5px 16px rgba(33, 27, 24, 0.25);
+
+    transition:
+        opacity 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.botao-voltar-topo.botao-visivel {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+
+.botao-voltar-topo:hover,
+.botao-voltar-topo:focus {
+    background-color: var(--cor-destaque-escura);
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   10. AJUSTES PARA TABLETS
+   ===================================================== */
+
+@media (min-width: 600px) {
+    .cabecalho {
+        padding: 24px 32px;
+    }
+
+    .destaque {
+        min-height: 400px;
+        padding: 36px 32px;
+    }
+
+    .navegacao-categorias {
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+
+    .categoria {
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+
+    .lista-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .produto img {
+        height: 180px;
+    }
+
+    .produto-conteudo {
+        padding: 16px;
+    }
+
+    .produto h3 {
+        font-size: 1.2rem;
+    }
+
+    .produto-descricao {
+        font-size: 0.88rem;
+    }
+}
+
+
+/* =====================================================
+   11. AJUSTES PARA COMPUTADORES
+   ===================================================== */
+
+@media (min-width: 960px) {
+    .cabecalho {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 24px max(32px, calc((100% - 1160px) / 2));
+    }
+
+    .destaque {
+        min-height: 480px;
+        padding-right: max(32px, calc((100% - 1160px) / 2));
+        padding-left: max(32px, calc((100% - 1160px) / 2));
+    }
+
+    .navegacao-categorias {
+        justify-content: center;
+    }
+
+    .categoria {
+        max-width: 1160px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .lista-produtos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .produto img {
+        height: 220px;
+    }
+}
